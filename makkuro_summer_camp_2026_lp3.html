@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>まっくろくろすけ 夏合宿 2026｜短期特別コース</title>
+  <meta name="description" content="デモクラティックスクールまっくろくろすけの夏合宿2026。泊まりながら、まっくろくろすけの1週間を体験してみませんか？" />
+  <style>
+    :root {
+      --blue: #0b5fa5;
+      --deep-blue: #073f74;
+      --sky: #e7f7ff;
+      --green: #3d9b50;
+      --light-green: #eef9e9;
+      --orange: #f39800;
+      --yellow: #fff4b8;
+      --cream: #fffaf0;
+      --text: #23313f;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eaf8ff 0%, #fffaf0 45%, #ffffff 100%);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11, 95, 165, 0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 900;
+      color: var(--deep-blue);
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: var(--deep-blue);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      padding: 96px 0 72px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 42%, rgba(255, 255, 255, 0.18) 78%),
+        url('a_wide_watercolor_illustration_style_landscape_ba.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(255,255,255,0), #fffaf0);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--deep-blue);
+      font-weight: 800;
+      box-shadow: 0 6px 16px rgba(7, 63, 116, 0.08);
+    }
+
+    h1 {
+      margin: 20px 0 14px;
+      color: var(--blue);
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.05;
+      letter-spacing: 0.06em;
+      text-shadow: 0 4px 0 rgba(255, 255, 255, 0.95);
+    }
+
+    .subtitle {
+      font-size: clamp(18px, 2.4vw, 28px);
+      font-weight: 900;
+      color: var(--deep-blue);
+      background: linear-gradient(transparent 58%, #ffe36e 58%);
+      display: inline;
+    }
+
+    .lead {
+      margin-top: 22px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 180px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 10px 22px rgba(7, 63, 116, 0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(7, 63, 116, 0.2);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--orange), #ffb330);
+    }
+
+    .btn-secondary {
+      color: var(--blue);
+      background: var(--white);
+      border: 2px solid rgba(11, 95, 165, 0.2);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 18px 40px rgba(7, 63, 116, 0.16);
+      border: 3px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .illustration {
+      min-height: 330px;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, transparent 0 55%, rgba(80, 176, 86, 0.25) 56%),
+        radial-gradient(circle at 20% 68%, #ffcf70 0 4%, transparent 4.2%),
+        radial-gradient(circle at 36% 64%, #f7b5b5 0 4%, transparent 4.2%),
+        radial-gradient(circle at 53% 68%, #7ec8ff 0 4%, transparent 4.2%),
+        radial-gradient(circle at 70% 65%, #ffd06e 0 4%, transparent 4.2%),
+        linear-gradient(180deg, #c8efff, #f7fff1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--deep-blue);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .price-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .price {
+      padding: 16px;
+      border-radius: 18px;
+      text-align: center;
+      background: var(--cream);
+      border: 2px solid rgba(243, 152, 0, 0.35);
+    }
+
+    .price.blue {
+      border-color: rgba(11, 95, 165, 0.25);
+      background: #f0f8ff;
+    }
+
+    .price span {
+      display: block;
+      color: var(--orange);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .price.blue span {
+      color: var(--blue);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-title .small {
+      display: inline-block;
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      color: var(--deep-blue);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.3;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 12px 28px rgba(7, 63, 116, 0.09);
+      border: 1px solid rgba(11, 95, 165, 0.08);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--light-green);
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 21px;
+    }
+
+    .overview {
+      background: #fff;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 16px;
+      background: #f7fbff;
+      text-align: left;
+    }
+
+    .info-table th {
+      width: 34%;
+      color: var(--deep-blue);
+      border-radius: 14px 0 0 14px;
+      white-space: nowrap;
+    }
+
+    .info-table td {
+      border-radius: 0 14px 14px 0;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--light-green), #fff);
+      border: 2px solid rgba(61, 155, 80, 0.18);
+    }
+
+    .highlight-box ul {
+      margin: 0;
+      padding-left: 1.2em;
+      font-weight: 700;
+    }
+
+    .flow {
+      background: linear-gradient(180deg, #fffaf0 0%, #f0fbff 100%);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .apply-cta {
+      margin: 34px auto 0;
+      max-width: 760px;
+      padding: 28px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 12px 28px rgba(7, 63, 116, 0.1);
+      border: 2px solid rgba(243, 152, 0, 0.18);
+      text-align: center;
+    }
+
+    .apply-cta p {
+      margin: 0 0 18px;
+      font-weight: 800;
+      color: var(--deep-blue);
+    }
+
+    .step {
+      position: relative;
+      padding: 24px 18px;
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 10px 22px rgba(7, 63, 116, 0.08);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 18px 22px;
+      box-shadow: 0 8px 20px rgba(7, 63, 116, 0.08);
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--deep-blue);
+      font-weight: 900;
+    }
+
+    .contact {
+      background: var(--deep-blue);
+      color: var(--white);
+    }
+
+    .contact h2,
+    .contact .small {
+      color: var(--white);
+    }
+
+    .contact-box {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      text-align: center;
+    }
+
+    .contact-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 26px 0;
+      text-align: left;
+    }
+
+    .contact-item {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.14);
+      font-weight: 800;
+    }
+
+    .footer {
+      padding: 24px 0;
+      background: #052f55;
+      color: rgba(255, 255, 255, 0.82);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 680px;
+        padding-top: 44px;
+        background-position: 62% center;
+      }
+
+      .cards,
+      .steps,
+      .contact-items,
+      .price-box {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+        border-radius: 14px;
+      }
+
+      .info-table th {
+        padding-bottom: 6px;
+        background: #e9f5ff;
+      }
+
+      .info-table td {
+        padding-top: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <div class="container nav-inner">
+        <div class="logo">デモクラティックスクール まっくろくろすけ</div>
+        <nav class="nav-links" aria-label="ページ内メニュー">
+          <a href="#about">夏合宿とは</a>
+          <a href="#overview">開催概要</a>
+          <a href="#experience">体験できること</a>
+          <a href="#apply">申し込み</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="label">短期特別コース 2026</div>
+            <h1>夏合宿</h1>
+            <p class="subtitle">泊まりながら、まっくろくろすけの1週間を体験してみませんか？</p>
+            <p class="lead">
+              まっくろくろすけの子どもたちと一緒に過ごしながら、
+              自由な時間の使い方、話し合い、自治、年齢をこえた関わりを体験できる合宿です。
+              他スクールからの参加も歓迎しています。
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#apply">申し込み・問い合わせ</a>
+              <a class="btn btn-secondary" href="#overview">開催概要を見る</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="夏合宿の申込情報">
+            <div class="price-box">
+              <div class="price">
+                子ども参加費
+                <span>39,800円</span>
+              </div>
+              <div class="price blue">
+                保護者参加費
+                <span>39,000円</span>
+              </div>
+            </div>
+            <p style="margin: 16px 0 0; font-weight: 800; color: var(--deep-blue);">
+              定員6名・最少催行2人。申し込み状況により、早めに締め切る場合があります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-title">
+            <span class="small">ABOUT</span>
+            <h2>まっくろくろすけの暮らしを体験する合宿</h2>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="icon">🏡</div>
+              <h3>泊まりながら体験</h3>
+              <p>まっくろ家に泊まり、日常の生活を共にしながらスクールの雰囲気を体験できます。</p>
+            </div>
+            <div class="card">
+              <div class="icon">🌿</div>
+              <h3>自然の中で過ごす</h3>
+              <p>庭やグラウンドがあり、外遊びやスポーツも楽しめる環境です。</p>
+            </div>
+            <div class="card">
+              <div class="icon">🤝</div>
+              <h3>他スクールからも歓迎</h3>
+              <p>交流をかねて、他のスクールに通う子どもたちも参加できます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="overview">
+        <div class="container">
+          <div class="section-title">
+            <span class="small">INFORMATION</span>
+            <h2>開催概要</h2>
+          </div>
+          <div class="overview-grid">
+            <div class="card">
+              <table class="info-table">
+                <tbody>
+                  <tr>
+                    <th>日程</th>
+                    <td>2026年7月27日（月）〜7月30日（木）</td>
+                  </tr>
+                  <tr>
+                    <th>宿泊</th>
+                    <td>7月31日（金）までの4泊5日</td>
+                  </tr>
+                  <tr>
+                    <th>最少催行人数</th>
+                    <td>2人</td>
+                  </tr>
+                  <tr>
+                    <th>定員</th>
+                    <td>6名</td>
+                  </tr>
+                  <tr>
+                    <th>場所</th>
+                    <td>兵庫県神崎郡市川町坂戸592</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="highlight-box">
+              <h3>参加費</h3>
+              <ul>
+                <li>子ども参加費：39,800円</li>
+                <li>保護者参加費：39,000円</li>
+                <li>まっくろくろすけ体験参加費・宿泊プログラム代・食費等込み</li>
+                <li>申し込み状況により、早く締め切る場合があります</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <div class="section-title">
+            <span class="small">EXPERIENCE</span>
+            <h2>この合宿で体験できること</h2>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="icon">⏰</div>
+              <h3>自己決定で過ごす</h3>
+              <p>自分で時間を使い、何をするかを考えながら過ごします。</p>
+            </div>
+            <div class="card">
+              <div class="icon">🧒</div>
+              <h3>年齢をこえた関わり</h3>
+              <p>年齢に関係なく、対等な関係の中で一緒に生活します。</p>
+            </div>
+            <div class="card">
+              <div class="icon">💬</div>
+              <h3>話し合って決める</h3>
+              <p>全体のことは、みんなで話し合って決めていきます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow" id="apply">
+        <div class="container">
+          <div class="section-title">
+            <span class="small">HOW TO APPLY</span>
+            <h2>申し込みの流れ</h2>
+          </div>
+          <div class="steps">
+            <div class="step"><strong>問い合わせ</strong><br />メールまたは電話でご連絡ください。</div>
+            <div class="step"><strong>内容確認</strong><br />参加希望日程・人数・保護者参加の有無を確認します。</div>
+            <div class="step"><strong>申し込み</strong><br />必要事項を確認し、申し込みを完了します。</div>
+            <div class="step"><strong>事前案内</strong><br />持ち物や当日の流れをお知らせします。</div>
+            <div class="step"><strong>参加</strong><br />まっくろくろすけの夏合宿へ。</div>
+          </div>
+
+          <div class="apply-cta">
+            <p>参加をご希望の方は、下のボタンからメールを開いてお申し込みください。</p>
+            <a class="btn btn-primary" href="mailto:makkuro.info@gmail.com?subject=%E5%A4%8F%E5%90%88%E5%AE%BF2026%E3%81%AE%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF&body=%E5%A4%8F%E5%90%88%E5%AE%BF2026%E3%81%AB%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF%E3%82%92%E5%B8%8C%E6%9C%9B%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%0D%0A%0D%0A%E5%8F%82%E5%8A%A0%E5%B8%8C%E6%9C%9B%E8%80%85%E5%90%8D%EF%BC%9A%0D%0A%E5%B9%B4%E9%BD%A2%E3%83%BB%E5%AD%A6%E5%B9%B4%EF%BC%9A%0D%0A%E4%BF%9D%E8%AD%B7%E8%80%85%E5%8F%82%E5%8A%A0%EF%BC%9A%E3%81%82%E3%82%8A%E3%83%BB%E3%81%AA%E3%81%97%0D%0A%E5%8F%82%E5%8A%A0%E4%BA%BA%E6%95%B0%EF%BC%9A%0D%0A%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%0A%E3%82%A2%E3%83%AC%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%BB%E9%85%8D%E6%85%AE%E4%BA%8B%E9%A0%85%EF%BC%9A%0D%0A%E3%81%9D%E3%81%AE%E4%BB%96%E8%B3%AA%E5%95%8F%EF%BC%9A">メールで申し込む</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-title">
+            <span class="small">FAQ</span>
+            <h2>よくある質問</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>他スクールからも参加できますか？</summary>
+              <p>はい。他スクールからの参加も歓迎しています。</p>
+            </details>
+            <details>
+              <summary>保護者も参加できますか？</summary>
+              <p>はい。保護者の方も参加できます。保護者参加費は39,000円です。</p>
+            </details>
+            <details>
+              <summary>定員はありますか？</summary>
+              <p>定員は6名です。申し込み状況により、早く締め切る場合があります。</p>
+            </details>
+            <details>
+              <summary>どんな場所で過ごしますか？</summary>
+              <p>市川町の自然の中にある古民家を使用します。庭やグラウンド、キッチン、布団などがあります。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="section-title">
+            <span class="small">CONTACT</span>
+            <h2>お問い合わせ・お申し込み</h2>
+          </div>
+          <div class="contact-box">
+            <p>参加をご希望の方、詳細を確認したい方は、メールまたはお電話でお問い合わせください。</p>
+            <div class="contact-items">
+              <div class="contact-item">メール：<a href="mailto:makkuro.info@gmail.com">makkuro.info@gmail.com</a></div>
+              <div class="contact-item">電話：<a href="tel:0790261129">0790-26-1129</a></div>
+              <div class="contact-item">担当：寺本</div>
+              <div class="contact-item">公式サイト：<a href="https://makkuro20.jp/">makkuro20.jp</a></div>
+            </div>
+            <a class="btn btn-primary" href="mailto:makkuro.info@gmail.com?subject=夏合宿2026についての問い合わせ&body=%0D%0A参加希望者名：%0D%0A学年・年齢：%0D%0A保護者参加：あり・なし%0D%0A連絡先：%0D%0A特筆事項（アレルギーなど）：%0D%0Aその他お問い合わせ内容：">メールで申し込む・問い合わせる</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        © Democratic School Makkurokurosuke / Summer Camp 2026
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
